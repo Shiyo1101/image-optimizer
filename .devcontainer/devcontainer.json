@@ -16,14 +16,7 @@
         "junstyle.php-cs-fixer", // フォーマッター拡張
         "mhutchie.git-graph",
         "seatonjiang.gitmoji-vscode"
-      ],
-      "settings": {
-        // 保存時に自動でコードフォーマットを実行する設定
-        "editor.formatOnSave": true,
-        "php-cs-fixer.executablePath": "${workspaceFolder}/vendor/bin/php-cs-fixer",
-        "php-cs-fixer.lastDownload": 0,
-        "php-cs-fixer.onsave": true
-      }
+      ]
     }
   },
   "postCreateCommand": "composer install"
