@@ -3,12 +3,20 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  // プロジェクトのファイルを Apache の公開ディレクトリに配置する設定
+  "workspaceMount": "source=${localWorkspaceFolder},target=/var/www/html,type=bind",
+  "workspaceFolder": "/var/www/html",
+  // Apache はコンテナ内で 80 を Listen。ホスト側は 8080 に固定公開する。
+  // NOTE: Linux/macOS だとホスト80番は権限/競合で別ポートに退避されがち。
+  "runArgs": [
+    "--publish=8080:80"
+  ],
+  // VS Code の Ports 表示/自動転送用（コンテナ側ポート）
   "forwardPorts": [
-    8080
+    80
   ],
-  "appPort": [
-    "8080:80"
-  ],
+  // 既定のコマンド上書きを無効化し、php:8.2-apache の CMD(apache2-foreground)で起動する
+  "overrideCommand": false,
   "customizations": {
     "vscode": {
       "extensions": [
