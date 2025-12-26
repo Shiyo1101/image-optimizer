@@ -2,6 +2,8 @@
 .DS_Store
 ._*
 
+.github/
+
 # --- PHP / Composer ---
 /vendor/
 composer.phar
