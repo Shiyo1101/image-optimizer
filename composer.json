@@ -1,0 +1,16 @@
+{
+  "name": "yoshiki-uchida/image-optimizer",
+  "description": "Micro Image Optimization Server in PHP",
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.0",
+    "phpstan/phpstan": "^1.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}

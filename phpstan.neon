@@ -1,0 +1,9 @@
+# バグチェックのルール
+
+parameters:
+	level: 5 # 0(緩い)〜9(厳格)
+	paths:
+		- .
+	excludePaths:
+		- vendor
+		- .devcontainer

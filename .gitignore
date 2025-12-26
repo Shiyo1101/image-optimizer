@@ -1,0 +1,24 @@
+# --- macOS ---
+.DS_Store
+._*
+
+.vscode/
+
+# --- PHP / Composer ---
+/vendor/
+composer.phar
+.phpunit.result.cache
+
+# --- Tools (Linter/Formatter cache) ---
+# PHP-CS-Fixerが高速化のために生成するキャッシュファイル
+.php-cs-fixer.cache
+
+# PHPStanのキャッシュ（もし生成される場合）
+*.phpstan
+
+# --- Environment Secrets ---
+.env
+.env.local
+
+# --- Application Specific ---
+# /cache/
