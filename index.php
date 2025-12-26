@@ -1,4 +1,5 @@
 <?php
+
 // 画像ディレクトリのパス
 $imageDir = __DIR__ . '/images/';
 
@@ -24,16 +25,18 @@ $orgHeight = imagesy($source);
 // 3. リサイズ処理
 $thumb = imagecreatetruecolor($width, $height);
 imagecopyresampled(
-    $thumb, $source,
-    0, 0, 0, 0,
-    $width, $height,
-    $orgWidth, $orgHeight
+    $thumb,
+    $source,
+    0,
+    0,
+    0,
+    0,
+    $width,
+    $height,
+    $orgWidth,
+    $orgHeight
 );
 
 // 4. ブラウザへ出力
 header('Content-Type: image/jpeg');
 imagejpeg($thumb, null, 80); // 品質80
-
-// 5. メモリ解放
-imagedestroy($thumb);
-imagedestroy($source);
