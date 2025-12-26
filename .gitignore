@@ -2,8 +2,6 @@
 .DS_Store
 ._*
 
-.vscode/
-
 # --- PHP / Composer ---
 /vendor/
 composer.phar
